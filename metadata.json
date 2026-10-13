@@ -1,0 +1,8 @@
+{
+  "name": "CEFR Mock Tests",
+  "description": "CEFR Multilevel mock test platform for reading and language skills with exact format, question bank, and scoring rules.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

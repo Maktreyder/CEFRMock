@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  /* Light Theme (Variation 5 - Refined Warm Editorial) */
+  --bg: #F8F7F4;
+  --surface: #FFFFFF;
+  --ink: #1A1A1A;
+  --muted: #6B6862;
+  --line: #E5E2DC;
+  --brand: #1A1A1A;
+  --brand-ink: #FFFFFF;
+  --accent: #B08D57;
+  --ok: #1E7E52;
+  --bad: #B83226;
+  font-family: "Public Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+:root[data-theme="dark"],
+html.dark {
+  /* Dark Theme (Pure Deep Black) */
+  --bg: #000000;
+  --surface: #111111;
+  --ink: #F5F5F5;
+  --muted: #8E8E93;
+  --line: #242424;
+  --brand: #C6A66C;
+  --brand-ink: #000000;
+  --accent: #D4AF37;
+  --ok: #34D399;
+  --bad: #F87171;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Public Sans", system-ui, sans-serif;
+  line-height: 1.55;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--surface);
+}
+
+.font-serif,
+h1, h2, h3 {
+  font-family: "Newsreader", Georgia, serif;
+}
+
+/* Custom gap input and select styles matching authentic CEFR exam test layout */
+input.gap-input {
+  font: inherit;
+  padding: 2px 8px;
+  border: 1.5px solid var(--brand);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  width: 7.5em;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+input.gap-input:focus-visible,
+select.gap-select:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+select.gap-select {
+  font: inherit;
+  padding: 2px 6px;
+  border: 1.5px solid var(--brand);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  min-width: 6.5em;
+}
+
+/* Review mode highlights */
+.mk-ok {
+  border-color: var(--ok) !important;
+  background-color: color-mix(in srgb, var(--ok) 16%, transparent) !important;
+}
+
+.mk-bad {
+  border-color: var(--bad) !important;
+  background-color: color-mix(in srgb, var(--bad) 16%, transparent) !important;
+}
